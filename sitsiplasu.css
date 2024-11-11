@@ -36,7 +36,12 @@
   grid-row-end: span 3;
 }
 #participants{
-  width: 100%;
+  width: 49%;
+  height: 100%;
+  resize: none;
+}
+#food-things{
+  width: 49%;
   height: 100%;
   resize: none;
 }
@@ -71,5 +76,24 @@
   padding-bottom: 5px;
   overflow-wrap: break-word;
   hyphens: auto;
+  text-align: center;
+}
+.row{
+  width: 100%;
+  align-content: center;
+  border: 1px black solid;
+}
+.cell{
+  border: 1px solid black;
+  min-width: 70px;
+  max-width: 120px;
+  word-wrap: break-word;
+  white-space: normal;
+  text-align: center;
+}
+.empty{
+  width: 20px;
+}
+#choice-title{
   text-align: center;
 }
