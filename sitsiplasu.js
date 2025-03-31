@@ -33,9 +33,6 @@ function printToExcel(filename = 'test.xlsx') {
   XLSX.writeFile(workbook, filename);
 }
 
-
-
-
 function submit(){
   let people = [];
   let all = [];
@@ -213,6 +210,12 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
   });
+  const helpButton = document.getElementById('helpButton');
+  helpButton.addEventListener('click', showInstructions);
+  
+  const closeButton = document.getElementById('closeButton');
+  closeButton.addEventListener('click', hideInstructions);
+  
 });
 
 
@@ -300,3 +303,25 @@ function changeTableWithFood(indexes){
 
   
 }
+
+function showInstructions(){
+  const instructionsContainer = document.getElementById('instructions-container');
+  const contentContainer = document.getElementsByTagName('body')[0];
+  
+  instructionsContainer.style.visibility = 'visible';
+  contentContainer.style.overflow = 'hidden'
+}
+
+function hideInstructions() {
+  const instructionsContainer = document.getElementById('instructions-container');
+  const contentContainer = document.getElementsByTagName('body')[0];
+  
+  instructionsContainer.style.visibility = 'hidden';
+  contentContainer.style.overflow = 'visible'
+  
+  
+
+  
+}
+
+

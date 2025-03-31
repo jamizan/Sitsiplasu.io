@@ -8,40 +8,48 @@
     <title>Plaseerauskone</title>
 </head>
 <body>
+    <div class="instructions-container" id="instructions-container">
+        <div class="instructions-content">
+            <div class="instructions-header">
+                <h1>Käyttöohjeet</h1>
+                <button id="closeButton">X</button>
+            </div>
+            <div></div>
 
+        </div>
+    </div>
     <div class="content">
         <div class="header">
             <h1>Plaseerauskone</h1>
         </div>
         <div class="container">
             <div class="item item1">
-                <textarea name="participants" id="participants" cols="20" rows="50"></textarea>
-                <textarea name="food-things" id="food-things" cols="20" rows="50"></textarea>
+                <textarea placeholder="Osallistujien nimet" name="participants" id="participants" cols="20" rows="50"></textarea>
+                <textarea placeholder="Osallistujien ruuat/juomat" name="food-things" id="food-things" cols="20" rows="50"></textarea>
             </div>
             <div class="item item2">
-                <h1>Syötä osallistujat vasemmalla olevaan tekstikenttään (1 osallistuja per rivi) ja valitse pöytien määrä alta.
-
+                <h1>
+                    Syötä osallistujat vasemmalla olevaan tekstikenttään (1 osallistuja per rivi) ja valitse pöytien määrä alta.
                 </h1>
             </div>
             <div class="item item3">
                 <div class="product-quantity">
                     <h3>Pöytien määrä:</h3>
                     <input type="text" id="quantity" name="quantity" value="0">
+                    <button onclick="increase()" type="button" class="increment-quantity"><span>&#43;</span></button>
+                    <button onclick="decrease()"type="button" class="decrement-quantity"><span>&#8722;</span></button>
                     <div class="quantity-selectors-container">
                         <div class="quantity-selectors">
-                            <button onclick="increase()" type="button" class="increment-quantity"><span>&#43;</span></button>
-                            <button onclick="decrease()"type="button" class="decrement-quantity"><span>&#8722;</span></button>
+                            <button onclick="submit()">Plaseeraa</button>
+                            <button onclick="showFoods()">Ruuat</button>
                         </div>
                     </div>
                     <div class="button">
-                        <button onclick="submit()">Plaseeraa</button>
-                    </div>
-                    <div class="button">
+
                         <button onclick="printToExcel()">Print</button>
+                        <button type="button" class="helpButton" id="helpButton">Ohjeet</button>
                     </div>
-                    <div class="button">
-                        <button onclick="showFoods()">ruuat</button>
-                    </div>
+
                 </div>
             </div>
         </div>
